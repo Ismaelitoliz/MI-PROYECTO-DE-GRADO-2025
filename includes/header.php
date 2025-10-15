@@ -24,8 +24,11 @@ $categorias = $conn->query("SELECT * FROM categorias ORDER BY nombre ASC");
                 <li><a href="ubicacion.php">UBICACIÓN</a></li>
                 <li><a href="contacto.php">CONTACTO</a></li>
                 <li>
-                    <a href="#" id="adminLoginBtn"><i class="fas fa-user-shield"></i> Admin</a>
-                </li>
+                  <a href="admin/index.php" id="adminLoginBtn">
+               <i class="fas fa-user-shield"></i> Admin
+                    </a>
+               </li>
+
             </ul>
         </nav>
     </div>

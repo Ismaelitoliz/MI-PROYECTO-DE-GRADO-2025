@@ -1,12 +1,12 @@
 <?php
-$host = "localhost";
-$user = "root"; // tu usuario de MySQL en XAMPP
-$pass = "";     // tu contraseña (vacía por defecto en XAMPP)
-$db   = "chocopasteles";
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "chocopasteles";
 
-$conn = new mysqli($host, $user, $pass, $db);
+$conn = new mysqli($servername, $username, $password, $dbname);
 
 if ($conn->connect_error) {
-    die("Error de conexión: " . $conn->connect_error);
+    die("Error en la conexión: " . $conn->connect_error);
 }
 ?>
