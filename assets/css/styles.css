@@ -1,3 +1,5 @@
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
 /* Header y menú */
 header {
     background: #917954;
@@ -6,6 +8,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
+    width: 100%;
 }
 
 .header-content {
@@ -161,6 +164,10 @@ footer {
     /* reduce espacio vertical */
     font-size: 0.9em;
     /* texto un poco más chico */
+    width: 100%;
+    background: #5D4037;
+    color: #fff;
+    margin-top: 0;
 }
 
 .footer-content {
@@ -170,6 +177,7 @@ footer {
     max-width: 1100px;
     margin: 0 auto;
     gap: 20px;
+    color: #fff;
 }
 
 .footer-section {
@@ -628,4 +636,104 @@ main p {
 }
 .valor p {
     color: #77643a;
+}
+/* POR QUÉ ELEGIRNOS */
+.por-que-elegirnos {
+    padding: 80px 0;
+    background: #D7CCC8;
+    text-align: center;
+}
+.por-que-elegirnos h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #6D4C41;
+}
+.beneficios {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+.beneficio {
+    background: #fff3e0;
+    padding: 25px;
+    border-radius: 15px;
+    flex: 1 1 250px;
+    max-width: 300px;
+    transition: transform 0.3s;
+}
+.beneficio:hover {
+    transform: translateY(-10px);
+}
+.beneficio i {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 15px;
+}
+.beneficio h3 {
+    margin-bottom: 10px;
+    color: #6D4C41;
+}
+
+/* GALERÍA */
+.galeria {
+    padding: 80px 0;
+    text-align: center;
+}
+.galeria h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #6D4C41;
+}
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+.galeria-grid img {
+    width: 100%;
+    border-radius: 15px;
+    transition: transform 0.3s;
+}
+.galeria-grid img:hover {
+    transform: scale(1.05);
+}
+/* Ajustar testimonio para que estén más juntos */
+.comentarios {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px; /* Menos espacio */
+    margin-bottom: 30px;
+}
+.testimonio {
+    background: #D7CCC8;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 280px;
+    text-align: left;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Formulario de comentario */
+.form-comentario {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+.form-comentario h3 {
+    margin-bottom: 15px;
+    color: #6D4C41;
+}
+.form-comentario input,
+.form-comentario textarea {
+    width: 100%;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    resize: none;
+}
+.form-comentario button {
+    margin-top: 5px;
 }

@@ -7,6 +7,16 @@ $productos = $conn->query("SELECT p.*, c.nombre AS categoria FROM productos p LE
 // Obtener categorías para el menú
 $categorias = $conn->query("SELECT * FROM categorias ORDER BY nombre ASC");
 ?>
+<?php
+require_once("config/database.php");
+
+// Guardar comentario si se envía el formulario
+if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['nombre'], $_POST['comentario'])){
+    $nombre = $conn->real_escape_string($_POST['nombre']);
+    $comentario = $conn->real_escape_string($_POST['comentario']);
+    $conn->query("INSERT INTO comentarios (nombre, comentario) VALUES ('$nombre', '$comentario')");
+}
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -50,6 +60,72 @@ $categorias = $conn->query("SELECT * FROM categorias ORDER BY nombre ASC");
         </div>
         <?php endwhile; ?>
     </div>
+    <!-- POR QUÉ ELEGIRNOS -->
+<section class="por-que-elegirnos">
+    <div class="container">
+        <h2>¿Por qué elegirnos?</h2>
+        <div class="beneficios">
+            <div class="beneficio">
+                <i>🍫</i>
+                <h3>Ingredientes naturales</h3>
+                <p>Usamos cacao y frutas frescas de primera calidad.</p>
+            </div>
+            <div class="beneficio">
+                <i>👩‍🍳</i>
+                <h3>Hechos artesanalmente</h3>
+                <p>Cada postre es preparado con dedicación y amor.</p>
+            </div>
+            <div class="beneficio">
+                <i>🚚</i>
+                <h3>Entrega rápida</h3>
+                <p>Realiza tu pedido y te lo llevamos a casa.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- GALERÍA DE FOTOS -->
+<section class="galeria">
+    <div class="container">
+        <h2>Galería Dulce</h2>
+        <div class="galeria-grid">
+            <img src="img/galeria1.jpg" alt="Postre 1">
+            <img src="img/galeria2.jpg" alt="Postre 2">
+            <img src="img/galeria3.jpg" alt="Postre 3">
+            <img src="img/galeria4.jpg" alt="Postre 4">
+        </div>
+    </div>
+</section>
+
+<!-- TESTIMONIOS -->
+<section class="testimonios">
+    <div class="container">
+        <h2>Lo que dicen nuestros clientes</h2>
+
+        <div class="comentarios">
+            <?php
+            $res = $conn->query("SELECT * FROM comentarios ORDER BY fecha DESC");
+            while($row = $res->fetch_assoc()):
+            ?>
+            <div class="testimonio">
+                <p><?php echo htmlspecialchars($row['comentario']); ?></p>
+                <span>– <?php echo htmlspecialchars($row['nombre']); ?></span>
+            </div>
+            <?php endwhile; ?>
+        </div>
+
+        <!-- Formulario de comentario -->
+        <div class="form-comentario">
+            <h3>Deja tu comentario</h3>
+            <form action="#testimonios" method="POST">
+                <input type="text" name="nombre" placeholder="Tu nombre" required>
+                <textarea name="comentario" placeholder="Tu comentario" rows="3" required></textarea>
+                <button type="submit" class="btn">Enviar</button>
+            </form>
+        </div>
+    </div>
+</section>
+
 </main>
 <footer style="background:#5D4037;color:#fff;">
     <?php include("includes/footer.php"); ?>

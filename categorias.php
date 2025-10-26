@@ -1,4 +1,6 @@
-<?php require_once("config/database.php");
+<?php
+session_start();
+require_once("config/database.php");
 // Obtener categorías para el menú
 $categorias = $conn->query("SELECT * FROM categorias ORDER BY nombre ASC");
 

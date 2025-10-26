@@ -10,10 +10,10 @@ if (!isset($_SESSION['admin'])) {
 <head>
   <meta charset="UTF-8">
   <title>Dashboard - Chocopasteles</title>
-  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
 <body>
-  <?php include("includes/sidebar.php"); ?>
+  <?php include __DIR__ . "/includes/sidebar.php"; ?>
   <main class="dashboard">
     <h1>¡GESTIONA TUS PRODUCTOS TU MISMO!</h1>
     <p>Selecciona una opción del menú lateral.</p>
