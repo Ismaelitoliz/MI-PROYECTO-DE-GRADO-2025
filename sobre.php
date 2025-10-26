@@ -22,27 +22,28 @@ require_once("config/database.php");
         Chocopasteles nació del amor por la repostería y el deseo de endulzar los momentos especiales de cada familia.
         Somos una tienda dedicada a la elaboración de tortas, postres y dulces artesanales, usando ingredientes frescos y recetas tradicionales.
       </p>
+      <img src="assets/img/1759068802_MIL HOJAS.webp" alt="Postre 1">
     </div>
     <div class="sobre-texto">
       <h1>Pasión por lo que hacemos</h1>
       <p>
-        Cada postre está elaborado con dedicación, buscando siempre transmitir alegría y dulzura en cada bocado.🍰✨
+      Cada postre está elaborado con dedicación artesanal y un profundo respeto por la repostería clásica, buscando siempre transmitir alegría y dulzura en cada bocado. Para nosotros, hornear es un acto de amor y una forma de celebrar los pequeños grandes momentos de la vida.🍰✨
       </p>
     </div>
   </section>
 
   <section class="sobre-valores">
     <div class="valor">
-      <h2>Dueño</h2>
-      <p>Rene Quispe</p>
+      <h2>Compromiso social</h2>
+      <p>Nos comprometemos a trabajar con proveedores locales para impulsar la economía de nuestra comunidad y a implementar prácticas sostenibles en nuestro proceso de producción para reducir el desperdicio.
     </div>
     <div class="valor">
       <h2>Misión</h2>
-      <p>Brindar felicidad a través de sabores únicos y productos de calidad.</p>
+      <p>Cada postre está elaborado con dedicación artesanal y un profundo respeto por la repostería clásica, buscando siempre transmitir alegría y dulzura en cada bocado. Para nosotros, hornear es un acto de amor y una forma de celebrar los pequeños grandes momentos de la vida.</p>
     </div>
     <div class="valor">
       <h2>Visión</h2>
-      <p>Ser la pastelería favorita de nuestra ciudad, reconocida por la creatividad y el cariño en cada postre.</p>
+      <p>Ser la pastelería favorita de nuestra ciudad, reconocida por la creatividad, la calidad inquebrantable y el cariño genuino que se pone en cada postre, logrando expandir nuestra dulzura a nuevos hogares.
     </div>
   </section>
 </main>
